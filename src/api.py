@@ -13,6 +13,8 @@ CORS(
 )
 
 model = tf.keras.models.load_model("model.keras")
+dummy = np.zeros((1, 224, 224, 3), dtype=np.float32)
+_ = model.predict(dummy)
 
 IMG_SIZE = (224, 224)
 THRESHOLD = 0.40
@@ -36,14 +38,14 @@ def home():
 def predict():
 
     if "file" not in request.files:
-        return jsonify({"error": "No file uploaded"}), 400
+        return "No file uploaded", 400
 
     file = request.files["file"]
 
     try:
         image = Image.open(io.BytesIO(file.read())).convert("RGB")
     except:
-        return jsonify({"error": "Invalid image"}), 400
+        return "Invalid image", 400
 
     img = preprocess(image)
 
