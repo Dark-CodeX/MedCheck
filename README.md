@@ -8,10 +8,10 @@ The goal is to assist in identifying potentially fake medicines and reduce risks
 ## Examples
 
 ### Real Example
-<img src="./images/real.png" width="500"/>
+<img src="./images/real.png" width="800"/>
 
 ### Fake Example
-<img src="./images/fake.png" width="500"/>
+<img src="./images/fake.png" width="800"/>
 
 ---
 
@@ -66,5 +66,3 @@ The goal is to assist in identifying potentially fake medicines and reduce risks
 - **Backend**: Flask
 - **ML Framework**: TensorFlow
 - **Model Type**: CNN (Convolutional Neural Network) with MobileNetV2
-
----
