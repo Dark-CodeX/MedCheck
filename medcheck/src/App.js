@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-const BASE_URL = 'http://localhost:10000';
+const BASE_URL = 'https://pymedcheck.onrender.com';
 
 const SendToBackend = async (data, endPoint, content_type) => {
     try {

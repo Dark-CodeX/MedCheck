@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(
     app,
     supports_credentials=True,
-    resources={r"/*": {"origins": [""]}}
+    resources={r"/*": {"origins": ["https://medcheck-nzla.onrender.com"]}}
 )
 
 model = tf.keras.models.load_model("model.keras")
